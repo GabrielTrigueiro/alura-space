@@ -1,7 +1,9 @@
+import PaginaInicial from "./paginas/PaginaInicial";
 
+import './styles/estilosGlobais.scss'
 
 export default function App() {
   return (
-    <h1>space alur</h1>
+    <PaginaInicial/>
   );
 }
