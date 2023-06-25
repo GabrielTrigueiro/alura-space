@@ -1,14 +1,15 @@
 import styles from "./Tags.module.scss"
+import fotos from "../Galeria/fotos.json"
 
-const Tags = () => {
+const Tags = ({tags, filtrarFotos, setItens}) => {
   return (
-    <div className={styles.tags}>
+    <div  className={styles.tags}>
       <p>Filtre por tags:</p>
       <ul className={styles.tags__lista}>
-        <li>Estrelas</li>
-        <li>Galáxias</li>
-        <li>Lua</li>
-        <li>Planetas</li>
+        {tags.map((item) => (
+          <li onClick={()=>filtrarFotos(item)}>{item}</li>
+        ))}
+        <li onClick={()=>setItens(fotos)}>Todas</li>
       </ul>
     </div>
   );
